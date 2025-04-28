@@ -17,7 +17,7 @@ app.listen(PORT, ()=> {
 
 // mongodb atlas connection!!
 
-mongodb+srv://utsabadhikari075:VWOCc3ddaY97to6i@cluster0.oh2zftd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+// mongodb+srv://utsabadhikari075:VWOCc3ddaY97to6i@cluster0.oh2zftd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 
 
