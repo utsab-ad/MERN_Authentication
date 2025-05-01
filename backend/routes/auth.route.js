@@ -9,10 +9,4 @@ router.get("/login", Login)
 
 router.get("/logout", Logout)
 
-// router.get("/signup", (req, res)=> {
-//     res.send("SignUp Route");
-// })
-
-
-
 export default router;
