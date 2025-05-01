@@ -1,24 +1,23 @@
 import express from 'express'
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import { connectDB } from './db/connectDB.js';
+import authRoutes from "./routes/auth.route.js"
 
-const PORT = 3030
+dotenv.config();
+
+const PORT = process.env.PORT || 5000
 
 const app = express();
+
 
 app.get("/", (req, res) => {
     res.send("Hello there, this is live");
 })
 
-mongoose.connect("mongodb+srv://utsabadhikari075:VWOCc3ddaY97to6i@cluster0.oh2zftd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+app.use("/api/auth", authRoutes)
 
 app.listen(PORT, ()=> {
+    connectDB();
     console.log(`The server is running on the http://localhost:${PORT}`);
 })
-
-// mongodb atlas connection!!
-
-// mongodb+srv://utsabadhikari075:VWOCc3ddaY97to6i@cluster0.oh2zftd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-
-
-//VWOCc3ddaY97to6i
